@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Nearby Theatres</h1>
+    {% if theatres %}
+    <ul>
+    {% for theatre in theatres %}
+        <li class="theatre_item">
+        {{ theatre.name }}: {{theatre.distance.km}} km
+        </li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>Hi! There are not any theatres nearby to you :( </p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+
+body {
+    font-family: 'Inconsolata', monospace;
+}
+
+.theatre_item {
+    line-height: 2.25rem;
+}
+
+.home_panel {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 2rem;
+    background-image: url("./../img/home_background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: beige;
+}
+
+.home_panel__modal, .sweet-modal-content {
+    color: #0e0f12;
+}
+.home_panel__title {
+    font-size: 2rem;
+    align-self: flex-start;
+    max-width: 300px;
+
+}
