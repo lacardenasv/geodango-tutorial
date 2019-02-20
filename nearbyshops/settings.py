@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'gis',
         'USER': 'lacardenasv',
         'PASSWORD': 'demodemo',
-        'HOST': '127.0.0.1',
+        'HOST': 'postgis_db',
         'PORT': '5432'
     }
 }

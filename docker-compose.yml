@@ -1,0 +1,17 @@
+version: '3'
+services:
+  postgis_db:
+    image: kartoza/postgis:9.6-2.4
+    environment:
+      POSTGRES_USER: lacardenasv
+      POSTGRES_PASS: demodemo
+      POSTGRES_DBNAME: gis
+  geodjango:
+    build: .
+    command: bash -c "sleep 150 && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:4001"
+    volumes:
+      - .:/src
+    ports:
+      - "4001:4001"
+    depends_on:
+      - postgis_db
